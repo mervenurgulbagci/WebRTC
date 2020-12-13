@@ -114,3 +114,35 @@ function sendMessage() {
     dataChannel.send(input.value);
     input.value = "";
 }
+
+const constraints = {
+    video: true,audio : true
+};
+navigator.mediaDevices.getUserMedia(constraints).
+  then(function(stream) { /* use the stream */ })
+    .catch(function(err) { /* handle the error */ });
+
+constraints = {
+    video : {
+        frameRate : {
+            ideal : 10,
+            max : 15
+        },
+        width : 1280,
+        height : 720,
+        facingMode : "user"
+    }
+};
+peerConnection.addStream(stream);
+
+peerConnection.onaddstream = function(event) {
+    videoElement.srcObject = event.stream;
+};
+
+var configuration = {
+    "iceServers" : [ {
+        "url" : "stun:stun2.1.google.com:19302"
+    } ]
+};
+
+
