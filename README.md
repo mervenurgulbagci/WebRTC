@@ -6,4 +6,4 @@ This application that creates a peer-to-peer connection to share data between tw
 ## Referenced Articles
 - [Web RTC](https://www.baeldung.com/webrtc)
 ### Display
-![Localhost:8080]https://github.com/mervenurgulbagci/WebRTC/blob/master/webRTC.PNG
+![Localhost:8080](https://github.com/mervenurgulbagci/WebRTC/blob/master/webRTC.PNG)
